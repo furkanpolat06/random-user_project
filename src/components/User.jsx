@@ -8,10 +8,10 @@ const User = () => {
       .catch((err) => console.log(err));
     }
     useEffect(()=>{
-        const timer =setInterval(GetUser, 100000)
+        // const timer =setInterval(GetUser, 100000)
         GetUser()
         return()=>{
-            clearInterval(timer)
+            // clearInterval(timer)
         }
     },[])
   return (
