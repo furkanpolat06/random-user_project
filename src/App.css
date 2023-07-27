@@ -44,7 +44,7 @@ img{
   
   .btn {
     margin-top: 20px !important;
-    background-color: #2ecc71 !important;
+    background-color: #2dcc70 !important;
     border: none !important;
     border-radius: 5px;
     padding: 10px 20px !important;
@@ -59,4 +59,33 @@ img{
   .container {
     display: flex;
     justify-content: center;
+  }
+  #icons{
+    cursor: pointer;
+  }
+ 
+  .icon:hover{
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  .icon{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 1rem;
+    text-align: center;
+    
+
+  }
+  #table tbody tr:nth-child(odd) {
+    background-color: yellow !important; /* Sarı renk */
+  }
+  
+  #table tbody tr:nth-child(even) {
+    background-color: red !important; /* Kırmızı renk */
+  }
+  
+  /* İlk sütundaki rakamların arka plan rengi */
+  #table tbody tr th {
+    background-color: #ccc; /* Gri renk */
   }

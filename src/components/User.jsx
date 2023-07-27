@@ -6,16 +6,45 @@ import { useEffect, useState } from "react";
 const User = () => {
   const [userData, setUserData] = useState("");
   const [userList, setUserList] = useState([]);
+  const [display, setDisplay]=useState("")
+
+  const handleEmail=()=>{
+    setDisplay(userData.email)
+  }
+  const handleBirthday=()=>{
+    setDisplay(userData?.dob?.date.slice(0,10))
+
+  }
+  const handlePhone=()=>{
+    setDisplay(userData.phone)
+
+  }
+  const handleLocation=()=>{
+    setDisplay(userData.location.city)
+
+  }
 
   const handleAdd = () => {
-    setUserList([...userList, userData]);
+    
+    const filter=userList.map(item=>item.id.value.trim()).includes(userData.id.value.trim())
+    if (filter) {
+      alert("This user is already exist in your list ")
+      
+    }
+    else{
+      setUserList([...userList, userData]);
+    }
+    console.log("filter", filter);
+  
   }
-console.log(userList);
+console.log("userlist", userList);
+console.log("userdata",userData);
   const GetUser = () => {
     fetch("https://randomuser.me/api")
       .then((res) => res.json())
       .then((data) => setUserData(data.results[0]))
       .catch((err) => console.log(err));
+      console.log(userList);
   }
 
   useEffect(() => {
@@ -32,10 +61,25 @@ console.log(userList);
             <h1>{userData?.name?.first} {userData?.name?.last}</h1>
           </Card.Title>
           <Card.Text>
-            <h3>{userData?.email}</h3>
-            <h4>{new Date(userData?.dob?.date).toLocaleDateString("en-US")}</h4>
-            <h5>{userData?.phone}</h5>
-            <h6>{userData?.location?.city}</h6>
+ <h3>{display}</h3>
+ 
+ <div id='icons' className='d-flex justify-content-between g-2 display-4 '>
+  <div  onClick={handleEmail} className='icon p-2 bg-info rounded-circle'>
+  📧
+ </div>
+ <div  onClick={handleBirthday} className='icon p-2 bg-info rounded-circle'>
+  🎈
+ </div>
+ <div onClick={handlePhone} className='icon p-2 bg-info rounded-circle'>
+  
+ 📞
+ </div>
+ <div onClick={handleLocation} className='icon p-2 bg-info rounded-circle'>
+  
+ 📍
+ </div>
+  </div>
+           
           </Card.Text>
           <Button className="btn btn-success" onClick={GetUser}>Get Random User</Button>
           <Button className="btn btn-success ms-2" onClick={handleAdd}>Add User</Button>
@@ -43,17 +87,18 @@ console.log(userList);
       </Card>
       
 
-      <table className="table table-striped ">
+      <table id='tableID' className='table' >
         <thead>
           <tr>
             <th scope="col">#</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Email</th>
           </tr>
         </thead>
         <tbody>
         {userList.map((item, index) => (
+          
           <tr key={index}>
           <th scope="row">{index+1}</th>
           <td >{item?.name?.first}</td>
