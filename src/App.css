@@ -77,15 +77,13 @@ img{
     
 
   }
-  #table tbody tr:nth-child(odd) {
-    background-color: yellow !important; /* Sarı renk */
+  #tableID  tr:nth-child(odd) {
+    background-color: yellow ; /* Sarı renk */
   }
   
-  #table tbody tr:nth-child(even) {
-    background-color: red !important; /* Kırmızı renk */
+  #tableID tr:nth-child(even) {
+    background-color: red ; /* Kırmızı renk */
   }
-  
-  /* İlk sütundaki rakamların arka plan rengi */
-  #table tbody tr th {
-    background-color: #ccc; /* Gri renk */
+  #table{
+    border-radius: 10px;
   }

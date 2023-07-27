@@ -26,7 +26,7 @@ const User = () => {
 
   const handleAdd = () => {
     
-    const filter=userList.map(item=>item.id.value.trim()).includes(userData.id.value.trim())
+    const filter=userList.map(item=>item.id.value).includes(userData.id.value)
     if (filter) {
       alert("This user is already exist in your list ")
       
@@ -87,7 +87,7 @@ console.log("userdata",userData);
       </Card>
       
 
-      <table id='tableID' className='table' >
+      <table id='tableID' className='table table-striped' >
         <thead>
           <tr>
             <th scope="col">#</th>
