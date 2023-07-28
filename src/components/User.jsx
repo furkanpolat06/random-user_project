@@ -53,7 +53,8 @@ console.log("userdata",userData);
 
   return (
     <div>
-      <Card id='card' className="p-5 container" style={{ width: '40rem' }}>
+      <h1>Random User APP</h1>
+      <Card id='card' className="p-5 container" >
         <Card.Img variant="top" className="rounded-circle" src={userData?.picture?.large} alt="" />
         <Card.Body>
           <Card.Title>
@@ -63,18 +64,18 @@ console.log("userdata",userData);
           <Card.Text>
  <h3>{display}</h3>
  
- <div id='icons' className='d-flex justify-content-between g-2 display-4 '>
-  <div  onClick={handleEmail} className='icon p-2 bg-info rounded-circle'>
+ <div id='icons' className='d-flex justify-content-between g-2 display-5 '>
+  <div  onClick={handleEmail} className='icon  rounded-circle'>
   📧
  </div>
- <div  onClick={handleBirthday} className='icon p-2 bg-info rounded-circle'>
+ <div  onClick={handleBirthday} className='icon  rounded-circle'>
   🎈
  </div>
- <div onClick={handlePhone} className='icon p-2 bg-info rounded-circle'>
+ <div onClick={handlePhone} className='icon   rounded-circle'>
   
  📞
  </div>
- <div onClick={handleLocation} className='icon p-2 bg-info rounded-circle'>
+ <div onClick={handleLocation} className='icon  rounded-circle'>
   
  📍
  </div>

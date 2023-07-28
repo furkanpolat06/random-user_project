@@ -4,26 +4,27 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgba(255, 228, 196, 0.425) !important;
+    background-color: rgba(255, 228, 196, 0.199) !important;
 }
 img{
     max-width: 10rem !important;
     margin: auto;
 }
 #card {
+  max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    background: linear-gradient(to bottom, #1abc9c, #4498cfd3);
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #fbff00ad, #d31f1fa4);
     border-radius: 15px;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.288) ;
-    padding: 30px;
+  
   }
   
   .card-img-top {
     width: 200px;
-    height: 180px;
+    height: 170px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 20px;
@@ -43,7 +44,7 @@ img{
   }
   
   .btn {
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     background-color: #2dcc70 !important;
     border: none !important;
     border-radius: 5px;
@@ -62,28 +63,34 @@ img{
   }
   #icons{
     cursor: pointer;
+    /* display: flex !important;
+    justify-content: center !important;
+    align-items: center !important; */
+   
   }
  
   .icon:hover{
     opacity: 0.8;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   .icon{
     width: 90px;
     height: 90px;
     border-radius: 50%;
+    padding-top: 1rem;
     margin: 1rem;
-    text-align: center;
+
+    /* text-align: center; */
+   ;
+    background-color: rgba(255, 228, 196, 0.589);
     
 
   }
-  #tableID  tr:nth-child(odd) {
+ tr:nth-child(odd) {
     background-color: yellow ; /* Sarı renk */
   }
   
-  #tableID tr:nth-child(even) {
+  tr:nth-child(even) {
     background-color: red ; /* Kırmızı renk */
   }
-  #table{
-    border-radius: 10px;
-  }
+  
