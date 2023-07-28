@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 const User = () => {
   const [userData, setUserData] = useState("");
   const [userList, setUserList] = useState([]);
-  const [display, setDisplay]=useState("")
+  const [display, setDisplay]=useState((userData.email))
 
   const handleEmail=()=>{
     setDisplay(userData.email)
@@ -49,7 +49,14 @@ console.log("userdata",userData);
 
   useEffect(() => {
     getUser();
+    
   }, []);
+  useEffect(() => {
+    if (userData && userData.email) {
+      handleEmail();
+    }
+  }, [userData]);
+  
 
   return (
     <div>
