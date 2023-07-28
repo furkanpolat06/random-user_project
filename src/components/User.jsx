@@ -39,7 +39,7 @@ const User = () => {
   }
 console.log("userlist", userList);
 console.log("userdata",userData);
-  const GetUser = () => {
+  const getUser = () => {
     fetch("https://randomuser.me/api")
       .then((res) => res.json())
       .then((data) => setUserData(data.results[0]))
@@ -48,7 +48,7 @@ console.log("userdata",userData);
   }
 
   useEffect(() => {
-    GetUser();
+    getUser();
   }, []);
 
   return (
@@ -59,7 +59,7 @@ console.log("userdata",userData);
         <Card.Body>
           <Card.Title>
             <h4>Hi, My name is</h4>
-            <h1>{userData?.name?.first} {userData?.name?.last}</h1>
+            <h2>{userData?.name?.first} {userData?.name?.last}</h2>
           </Card.Title>
           <Card.Text>
  <h3>{display}</h3>
@@ -82,7 +82,7 @@ console.log("userdata",userData);
   </div>
            
           </Card.Text>
-          <Button className="btn btn-success" onClick={GetUser}>Get Random User</Button>
+          <Button className="btn btn-success" onClick={getUser}>Get Random User</Button>
           <Button className="btn btn-success ms-2" onClick={handleAdd}>Add User</Button>
         </Card.Body>
       </Card>

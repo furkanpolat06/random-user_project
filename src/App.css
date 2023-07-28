@@ -1,3 +1,6 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Rubik+Distressed&family=Shadows+Into+Light&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -16,9 +19,10 @@ img{
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    background: linear-gradient(to bottom, #fbff00ad, #d31f1fa4);
+    background: linear-gradient(to bottom, #fbff00ad, #d31f1fc7);
     border-radius: 15px;
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.288) ;
+    border: none;
   
   }
   
@@ -45,7 +49,7 @@ img{
   
   .btn {
     margin-top: 10px !important;
-    background-color: #2dcc70 !important;
+    background-color: #2b2ed4 !important;
     border: none !important;
     border-radius: 5px;
     padding: 10px 20px !important;
@@ -53,8 +57,15 @@ img{
     transition: background-color 0.3s ease !important; 
   }
   
+  h1{
+    font-family: 'Bungee Spice', cursive;
+  }
+  h2{
+    color: rgb(27, 4, 238) !important;
+    text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.555);
+  }
   .btn:hover {
-    background-color: #27ae60 !important;
+    background-color: #3a37d3e3 !important;
   }
   
   .container {
