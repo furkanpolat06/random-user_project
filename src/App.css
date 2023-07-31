@@ -97,11 +97,29 @@ img{
     
 
   }
- tr:nth-child(odd) {
-    background-color: yellow ; /* Sarı renk */
-  }
-  
-  tr:nth-child(even) {
-    background-color: red ; /* Kırmızı renk */
-  }
-  
+
+
+.table-striped>tbody>tr:nth-child(even)>td,
+.table-striped>tbody>tr:nth-child(even)>th {
+ background-color:#e0271d;
+
+ color: white;
+}
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+ background-color:yellow;
+
+}
+.table-striped>thead>tr>td,
+.table-striped>thead>tr>th {
+ background-color: rgba(129, 2, 2, 0.911);
+ color: white;
+}
+
+
+
+/* #tableID tr:nth-child(odd) {
+  background-color: yellow ; }
+
+#tableID tr:nth-child(even) {
+  background-color: red ; } */

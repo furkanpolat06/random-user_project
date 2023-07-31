@@ -95,9 +95,9 @@ console.log("userdata",userData);
       </Card>
       
 
-      <table id='tableID' className='table table-striped' >
+      <table className='table table-striped' >
         <thead>
-          <tr>
+          <tr >
             <th scope="col">#</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
@@ -107,7 +107,7 @@ console.log("userdata",userData);
         <tbody>
         {userList.map((item, index) => (
           
-          <tr key={index}>
+          <tr  id='tableID' key={index}>
           <th scope="row">{index+1}</th>
           <td >{item?.name?.first}</td>
           <td >{item?.name?.last}</td>
